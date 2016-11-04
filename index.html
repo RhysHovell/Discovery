@@ -40,7 +40,7 @@
       }
 
       .navbar-brand>img {
-        height: 130%;
+        height: 140%;
         width: auto;
 
       }
@@ -60,33 +60,65 @@
 
 
     }
+           .img-wrapper {
+  position: relative;
+ }
+           
+           h1 {
+               
+               color: whitesmoke;
+               opacity: 0.9;
+               
+           }
 
-    img.bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-  opacity: 0.8;
-  /* Set up positioning */
-  position: fixed;
+.img-overlay {
+  position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0.8;
+}
+.btn-success {
+  color: #fff;
+  background-color: whitesmoke;
+  border-color: black;
+}
+.img-overlay:before {
+  content: ' ';
+  display: block;
+  /* adjust 'height' to position overlay content vertically */
+  height: 50%;
+}
+.btn-responsive {
+  /* matches 'btn-md' */
+  padding: 30px 40px;
+  font-size: 18px;
+  position:relative;
+  line-height: 1.3333333;
+  border-radius: 8px;
+    background-color: whitesmoke;
+    color: black;
+    opacity: 0.7; 
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+@media (max-width:760px) { 
+    /* matches 'btn-xs' */
+    .btn-responsive {
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+        background-color: #faebd7;
+        opacity: 0.8;
+    }
 }
 
     </style>
 
     <body>
-<img src="img/mountain.jpg" class="bg">
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -97,12 +129,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href=""><img src="img/mountainlogo.png"></a>
+      <a class="navbar-brand" href=""><img src="img/mountainlogogray.png"></a>
       <h3 class="navbar-text" href="">Discovery</h3>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collap  se-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="login.html">Login</a></li>
         <li><a href="#">Register</a></li>
@@ -112,7 +144,17 @@
   </div>
   <!-- /.container-fluid -->
 </nav>
+        
 
-
+        
+        
     </body>
+ <div class="img-wrapper">
+    <img class="img-responsive" src="img/mountain.jpg">
+    <div class="img-overlay">
+        <h1>What are you here for? <span class="label label-default"></span></h1>
+      <button class="btn btn-md btn-responsive">Button</button>
+        <button class="btn btn-md btn-responsive">Button</button>
+    </div>
+</div>   
 </html>

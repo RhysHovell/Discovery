@@ -3172,14 +3172,16 @@ fieldset[disabled] .btn-primary.focus {
 }
 .btn-success {
   color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: whitesmoke;
+  border-color: black;
+  opacity: 0.8;
 }
 .btn-success:focus,
 .btn-success.focus {
   color: #fff;
-  background-color: #449d44;
-  border-color: #255625;
+  background-color: whitesmoke;
+  border-color: black;
+  opacity: 0.8;
 }
 .btn-success:hover {
   color: #fff;
