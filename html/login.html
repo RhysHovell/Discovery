@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Discovery</title>
 
-    <!-- Latest compiled and minified CSS -->
+  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -15,12 +15,17 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
     <script src="js/bootstrap.min.js"></script>
   </head>
+
 
 
 
@@ -51,9 +56,6 @@
     margin: auto;
     padding-top: 12px;
 }
-
-
-
     .h3 {
         font-family: "Arial", Helvetica, sans-serif;
 
@@ -62,11 +64,11 @@
            .img-wrapper {
   position: relative;
  }
-           
+
            h1 {
                color: whitesmoke;
                opacity: 1.0;
-               
+
            }
 
 .img-overlay {
@@ -91,7 +93,7 @@
 }
 .btn-responsive {
   /* matches 'btn-md' */
-  padding: 30px 40px;
+  padding: 10px 10px;
   font-size: 30px;
   width: 250px!important;
   position:relative;
@@ -99,10 +101,10 @@
   border-radius: 8px;
     background-color: whitesmoke;
     color: black;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
-@media (max-width:760px) { 
+@media (max-width:760px) {
     /* matches 'btn-xs' */
     .btn-responsive {
         padding: 1px 5px;
@@ -117,17 +119,32 @@
                position: fixed;
                top:250px;
                left: 140x;
-               
-               
-               
+
+
+
+           }
+           .login-container {
+               background-color: floralwhite;
+               opacity:0.9;
+               border-radius:8px;
+               position:fixed;
+               left;150px;
+               right:480px;
+               top:200px;
+               padding-left: 50px;
+               padding-right: 50px;
+               padding-top:30px;
+               padding-bottom:30px;
+
+
            }
            .btn-toolbar2 {
                position: fixed;
                top:200px;
                left; 250px;
-               
-               
-               
+
+
+
            }
 
     </style>
@@ -151,38 +168,32 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collap  se-1">
       <ul class="nav navbar-nav navbar-right">
-          
-          
-        <li><a href="equipment.html">Equipment</a></li>
-        <li><a href="tours.html">Tours</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="#">Register</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
   </div>
   <!-- /.container-fluid -->
 </nav>
-<div class="container-fluid bg-4 text-center"> 
-  <h3>Equipment</h3>
-  <div class="row   ">
-    <div class="col-sm-4">
-      <img src="birds1.jpg" alt="Image">
-        <p>Rucksacks</p>
-    </div>  
-    <div class="col-sm-4">
-      <img src="birds2.jpg" alt="Image">
-        <p>Footwear</p>
-    </div>
-    <div class="col-sm-4"> 
-      <img src="birds3.jpg" alt="Image">
-        <p>Clothing</p>
-    </div>
-    <div class="col-sm-4">
-      <img src="birds3.jpg" alt="Image">
-        <p>Accessories</p>
-    </div>
-  </div>
-</div>
-        
-        
+
+
+
+
     </body>
+ <div class="img-wrapper">
+    <img class="img-responsive" src="img/mountain.jpg">
+    <div class="img-overlay">
+        <div class ="login-container">
+        <h1 style="color:black;">Please Login</h1>
+        <form action = "login.php" method="post">
+            <input style="border-radius:6px; "type ="text" name="username" placeholder="Username"><br>
+            <input style="border-radius:6px; "type="password" name="password" placeholder="******"><br>
+            <input style="border-radius:4px; "type ="submit">
+            </form>
+            </div>
+
+
+    </div>
+</div>
 </html>

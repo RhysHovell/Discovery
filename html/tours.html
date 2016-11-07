@@ -22,7 +22,7 @@
     <script src="js/bootstrap.min.js"></script>
   </head>
 
- 
+
 
 
 
@@ -63,11 +63,11 @@
            .img-wrapper {
   position: relative;
  }
-           
+
            h1 {
                color: whitesmoke;
                opacity: 1.0;
-               
+
            }
 
 .img-overlay {
@@ -84,6 +84,10 @@
   background-color: whitesmoke;
   border-color: black;
 }
+           #map {
+        height: 500px;
+        width: 50%;
+       }
 .img-overlay:before {
   content: ' ';
   display: block;
@@ -100,10 +104,10 @@
   border-radius: 8px;
     background-color: whitesmoke;
     color: black;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
-@media (max-width:760px) { 
+@media (max-width:760px) {
     /* matches 'btn-xs' */
     .btn-responsive {
         padding: 1px 5px;
@@ -117,16 +121,16 @@
            .container {
                position: relative;
                bottom:100px;
-               
-               
+
+
            }
            .btn-toolbar2 {
                position: fixed;
                top:200px;
                left:320px;
-               
-               
-               
+
+
+
            }
 
     </style>
@@ -150,30 +154,28 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collap  se-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="login.html">Login</a></li>
-        <li><a href="#">Register</a></li>
+        <li><a href="equipment.html">Equipment</a></li>
+        <li><a href="tours.html">Tours</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
   </div>
   <!-- /.container-fluid -->
 </nav>
-        
 
-        
-        
-  
- <div class="img-wrapper">
-    <img class="img-responsive" src="img/mountain.jpg">
-    <div class="img-overlay">
-        <div class ="container">
-        <h1>What are you here for? <span class="label label-default"></span></h1>
-   
-            <button class="btn btn-md btn-responsive">Equipment</button>
-            <button class="btn btn-md btn-responsive">Guided Tours</button>
-            </div>
-    
-    </div>
-</div> 
+         <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 57.0704, lng: 3.6691},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCynAk6ns3Q603DxmPNqAeL6mg30KgSRBQ&callback=initMap"
+    async defer></script>
+  </body>
+</html>
     </body>
 </html>
