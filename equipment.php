@@ -167,7 +167,7 @@
     <div class="col-sm-4">
       <img src="birds1.jpg" alt="Image">
         <p>Rucksacks</p>
-    </div>
+    </div>  
     <div class="col-sm-4">
       <img src="birds2.jpg" alt="Image">
         <p>Footwear</p>

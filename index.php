@@ -55,8 +55,8 @@
 
 
 
-    .h3 {
-        font-family: "Arial", Helvetica, sans-serif;
+    h3 {
+        font-family: "Trebuchet MS", Helvetica, sans-serif
 
 
     }
@@ -115,10 +115,8 @@
     }
 }
            .container {
-               position: fixed;
-               top:250px;
-               left:40px;
-               
+               position: relative;
+               bottom:100px;
                
                
            }
@@ -164,7 +162,7 @@
 
         
         
-    </body>
+  
  <div class="img-wrapper">
     <img class="img-responsive" src="img/mountain.jpg">
     <div class="img-overlay">
@@ -176,5 +174,6 @@
             </div>
     
     </div>
-</div>   
+</div> 
+    </body>
 </html>
