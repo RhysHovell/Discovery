@@ -121,22 +121,22 @@
     }
 
     .container {
-        position: fixed;
-        top: 250px;
+        position: relative;
+        bottom: 250px;
         left: 140x;
+        padding-left:250px;
+        padding-right:250px;
+        padding-top: 20px;
+        padding-bottom:20px;
     }
 
     .login-container {
         background-color: floralwhite;
         opacity: 0.9;
         border-radius: 8px;
-        position: fixed;
-        left;
-        150px;
-        right: 480px;
-        top: 200px;
-        padding-left: 50px;
-        padding-right: 50px;
+        position: relative;
+        padding-left: 250px;
+        padding-right: 250px;
         padding-top: 30px;
         padding-bottom: 30px;
     }
@@ -184,6 +184,7 @@
 <div class="img-wrapper">
     <img class="img-responsive" src="img/mountain.jpg">
     <div class="img-overlay">
+        <div class="container">
         <div class="login-container">
             <h1 style="color:black;">Please Login</h1>
             <form action="login.php" method="post">
@@ -195,7 +196,7 @@
             </form>
         </div>
 
-
+    </div>
     </div>
 </div>
 
