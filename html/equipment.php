@@ -168,31 +168,36 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <div class="select">
+
         <div class="container-fluid bg-3 text-center">
             <h3>Equipment</h3>
-            <div class="row   ">
-                <div class="col-sm-3">
-                    <img src="img/rucksack.jpg" alt="Rucksacks" class="img-equip">
-                    <button class="btn btn-md btn-responsive">Rucksacks</button>
-                </div>
-                <div class="col-sm-3">
-                    <img src="img/boot.jpeg" alt="Footwear" class="img-equip">
-                    <button class="btn btn-md btn-responsive">Footwear</button>
-                </div>
-                <div class="col-sm-3">
-                    <img src="img/fleece.jpeg" alt="Clothing" class="img-equip">
-                    <button class="btn btn-md btn-responsive">Clothing</button>
-                </div>
-                <div class="col-sm-3">
-                    <img src="img/ice%20axe.jpg" alt="Accessories" class="img-equip">
-                    <button class="btn btn-md btn-responsive">Accessories</button>
-                </div>
-            </div>
+            <?php
+            $current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+            $results = $mysqli->query("Select product_id, product_name, price From equipment")
+            if ($results){
+                $products = '<ul class ="products">';
+                while($obj =  $results->fetch_object()){
+                    $products .= <<<EOT
+                    <li class = "product">
+                    <form method = "post action ="updatecart.php">
+                    <div class ="product_name"><h3>{$obj->product_name}</h3>
+                    <div class ="product_id"><h3>{$obj->product_id}</h3>
+                    <div class ="product_price"><h3>{$obj->price}</h3>
+                    <div class="product_image"><img src="images/{$obj->product_img}"></div>
+
+                    <input type="hidden" name="product_id" value="{$obj->product_id}" />
+                    <input type="hidden" name="product_name value=" add" />
+                    <input type="hidden" name="return_url" value="{$current_url}" />
+                    <div align="center"><button type="submit" class="add_to_cart">Add</button></div>
+                    </form>
+                    </li>
+                    EOT;
+                }
+                $products .= '/<ul>'
+
+            }
+            ?>
         </div>
-    </div>
-
-
 </body>
 
 </html>

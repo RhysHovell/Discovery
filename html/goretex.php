@@ -166,6 +166,15 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collap  se-1">
                 <ul class="nav navbar-nav navbar-right">
 
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <?php
+                    if(isset($_SESSION["cart_item"])){
+                        $item_total = 0;
+
+                        foreach ($_SESSION["cart_item"] as $item){
+                            $product_info = $db_handle-> (Select * from)
+                        }
+
 
                     <li><a href="equipment.html">Equipment</a></li>
                     <li><a href="tours.html">Tours</a></li>
